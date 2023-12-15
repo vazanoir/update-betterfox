@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-THEMEDIRECTORY=$(cd "$(dirname $0)" && cd .. && pwd)
+TEMPDIRECTORY=$(cd "$(dirname $0)" && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 USERJS=$(curl -s -o- https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js)
@@ -29,7 +29,6 @@ function saveProfile(){
 
 	echo "Set configuration to user.js file" >&2
 
-	echo "$THEMEDIRECTORY"
 	if [ ! -f "user.js" ]; then
 		echo "${USERJS}" > user.js
 	else
@@ -37,7 +36,7 @@ function saveProfile(){
 		echo "${USERJS}" > user.js
 	fi
 	
-	echo $(cat user-override.js) >> user.js
+	echo $(cat $TEMPDIRECTORY/user-override.js) >> user.js
 	
 	echo "Done." >&2
 	cd ..
