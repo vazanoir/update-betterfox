@@ -36,7 +36,7 @@ function saveProfile(){
 		echo -e "${USERJS}" > user.js
 	fi
 	
-	echo $(cat $TEMPDIRECTORY/user-override.js)
+	echo $(cat "$TEMPDIRECTORY"/user-override.js)
 	echo -e $(cat $TEMPDIRECTORY/user-override.js) >> user.js
 	
 	echo "Done." >&2
