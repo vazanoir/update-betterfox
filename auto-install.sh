@@ -8,7 +8,7 @@ firefoxInstallationPaths=(
     ~/snap/firefox/common/.mozilla/firefox
 )
 
-installScript="./scripts/install.sh"
+installScript="./install.sh"
 folderArg=""
 foldersFoundCount=0
 
