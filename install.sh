@@ -37,6 +37,7 @@ function saveProfile(){
 	fi
 	
 	echo $SCRIPTDIRECTORY
+	echo $SCRIPTDIRECTORY/user-override.js
 	echo $(cat "${SCRIPTDIRECTORY}/user-override.js")
 	echo $(cat "${SCRIPTDIRECTORY}/user-override.js") >> user.js
 	
