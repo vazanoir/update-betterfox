@@ -4,6 +4,7 @@ SCRIPTDIRECTORY=$(cd "$(dirname $0)" && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 USERJS=$(curl -s -o- https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js)
+OVERRIDEUSERJS=$(cat $SCRIPTDIRECTORY/user-override.js)
 
 
 # Get options.
@@ -36,10 +37,8 @@ function saveProfile(){
 		echo "${USERJS}" > user.js
 	fi
 	
-	echo $SCRIPTDIRECTORY
-	echo $SCRIPTDIRECTORY/user-override.js
-	echo $(cat $SCRIPTDIRECTORY/user-override.js)
-	echo $(cat "${SCRIPTDIRECTORY}/user-override.js") >> user.js
+	echo $(cat "${OVERRIDEUSERJS}")
+	echo $(cat "${OVERRIDEUSERJS}") >> user.js
 	
 	echo "Done." >&2
 	cd ..
