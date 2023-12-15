@@ -37,8 +37,7 @@ function saveProfile(){
 		echo "${USERJS}" > user.js
 	fi
 	
-	echo $(cat "${OVERRIDEUSERJS}")
-	echo $(cat "${OVERRIDEUSERJS}") >> user.js
+	echo $("${OVERRIDEUSERJS}") >> user.js
 	
 	echo "Done." >&2
 	cd ..
