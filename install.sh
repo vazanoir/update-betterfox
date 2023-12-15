@@ -29,12 +29,16 @@ function saveProfile(){
 
 	echo "Set configuration to user.js file" >&2
 
+	echo "$THEMEDIRECTORY"
 	if [ ! -f "user.js" ]; then
 		echo "${USERJS}" > user.js
 	else
 		cp user.js user.js.bak
 		echo "${USERJS}" > user.js
 	fi
+	
+	echo $(cat user-override.js) >> user.js
+	
 	echo "Done." >&2
 	cd ..
 }
@@ -72,7 +76,7 @@ else
 	do
 		if [[ -n "$i" ]];
 		then
-			echo "Installing ${THEME} theme for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
+			echo "Installing Betterfox for $(sed 's/SPACECHARACTER/ /g' <<< $i) profile.";
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
 	done
