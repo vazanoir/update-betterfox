@@ -4,7 +4,7 @@ SCRIPTDIRECTORY=$(cd "$(dirname $0)" && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 USERJS=$(curl -s -o- https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js)
-OVERRIDEUSERJS=$(cat $SCRIPTDIRECTORY/user-override.js)
+OVERRIDEUSERJS=$SCRIPTDIRECTORY/user-override.js
 
 
 # Get options.
