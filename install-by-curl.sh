@@ -14,7 +14,7 @@ curl -LJo $FILENAME https://codeload.github.com/vazanoir/update-betterfox/zip/re
 unzip $FILENAME
 cd $FOLDERNAME
 
-chmod +x auto-install.sh
+chmod +x ./auto-install.sh
 
 ./auto-install.sh
 
