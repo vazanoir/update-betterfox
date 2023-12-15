@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILENAME=update-better-fox.zip
+FILENAME=update-betterfox-main.zip
 
 (
 
@@ -8,7 +8,7 @@ cd $(mktemp -d) || exit 1
 mkdir betterfox
 cd betterfox
 
-curl -LJo https://codeload.github.com/vazanoir/update-betterfox/zip/refs/heads/main
+curl -LJo $FILENAME https://codeload.github.com/vazanoir/update-betterfox/zip/refs/heads/main
 
 unzip $FILENAME
 
