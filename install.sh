@@ -30,13 +30,13 @@ function saveProfile(){
 	echo "Set configuration to user.js file" >&2
 
 	if [ ! -f "user.js" ]; then
-		echo "${USERJS}" > user.js
+		echo -e "${USERJS}" > user.js
 	else
 		cp user.js user.js.bak
-		echo "${USERJS}" > user.js
+		echo -e "${USERJS}" > user.js
 	fi
 	
-	echo $(cat $TEMPDIRECTORY/user-override.js) >> user.js
+	echo -e $(cat $TEMPDIRECTORY/user-override.js) >> user.js
 	
 	echo "Done." >&2
 	cd ..
