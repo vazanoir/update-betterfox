@@ -8,6 +8,9 @@
 // PREF: allow websites to ask you to receive site notifications
 user_pref("permissions.default.desktop-notification", 0);
 
+// PREF: allow websites to ask you for your location
+user_pref("permissions.default.geo", 0);
+
 // PREF: restore login manager
 user_pref("signon.rememberSignons", true);
 
