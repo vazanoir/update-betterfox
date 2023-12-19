@@ -14,6 +14,11 @@ user_pref("permissions.default.geo", 0);
 // PREF: restore login manager
 user_pref("signon.rememberSignons", true);
 
+// PREF: restore the lazy download options
+user_pref("browser.download.useDownloadDir", true);
+user_pref("browser.download.always_ask_before_handling_new_types", false);
+user_pref("browser.download.manager.addToRecentDocs", true);
+
 // SCROLLING
 user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
 user_pref("general.smoothScroll", true); // DEFAULT
